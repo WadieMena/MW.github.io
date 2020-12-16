@@ -1,1 +1,31 @@
+<!DOCTYPE html>
 
+ <script language="JavaScript" type="text/javascript">
+ function floor(number)
+ {
+   return Math.floor(number*Math.pow(10,2))/Math.pow(10,2);
+ }
+
+ function dosum()
+ {
+   var mi = document.calculate.IR.value / 1200;
+   var base = 1;
+   var mbase = 1 + mi;
+   for (i=0; i<document.calculate.YR.value * 12; i++)
+   {
+     base = base * mbase
+   }
+   document.calculate.PI.value = floor(document.calculate.LA.value * mi / ( 1 - 
+
+ (1/base)))
+   document.calculate.MT.value = floor(document.calculate.AT.value / 12)
+   document.calculate.MI.value = floor(document.calculate.AI.value / 12)
+   var dasum = document.calculate.LA.value * mi / ( 1 - (1/base)) +
+ 	document.calculate.AT.value / 12 + 
+ 	document.calculate.AI.value / 12;
+   document.calculate.MP.value = floor(dasum);
+ }
+ </script>
+
+
+</html>
